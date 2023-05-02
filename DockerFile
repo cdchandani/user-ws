@@ -1,3 +1,5 @@
 FROM openjdk:11
+ADD target/user-ws-0.0.1-SNAPSHOT.jar user-ws-0.0.1-SNAPSHOT.jar
 VOLUME /tmp
 EXPOSE 8081
+ENTRYPOINT ["java", "-jar", "user-ws-0.0.1-SNAPSHOT.jar"]
